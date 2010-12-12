@@ -44,5 +44,79 @@
 MyMusicCollection - Portfolio Rails 2.3.10 Application
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Git and Heroku
+\end_layout
+
+\begin_layout Subsection
+Git
+\end_layout
+
+\begin_layout Subsubsection
+Rails application
+\end_layout
+
+\begin_layout Paragraph
+~/dev/music_collection/MyMusicCollection
+\end_layout
+
+\begin_layout LyX-Code
+git remote add origin git@github.com:CootCraig/MyMusicCollection.git
+\end_layout
+
+\begin_layout LyX-Code
+git push origin master
+\end_layout
+
+\begin_layout Paragraph
+~/dev/music_collection/docs
+\end_layout
+
+\begin_layout LyX-Code
+git remote add origin git@github.com:CootCraig/MyMusicCollectionDocs.git
+\end_layout
+
+\begin_layout LyX-Code
+git push origin master
+\end_layout
+
+\begin_layout Subsection
+Heroku Deployment
+\end_layout
+
+\begin_layout Paragraph
+~/dev/music_collection/MyMusicCollection
+\end_layout
+
+\begin_layout LyX-Code
+gem install heroku
+\end_layout
+
+\begin_layout LyX-Code
+heroku create MyMusicCollection
+\end_layout
+
+\begin_layout LyX-Code
+Creating mymusiccollection...
+ done
+\end_layout
+
+\begin_layout LyX-Code
+Created http://mymusiccollection.heroku.com/ | git@heroku.com:mymusiccollection.git
+\end_layout
+
+\begin_layout LyX-Code
+Git remote heroku added
+\end_layout
+
 \end_body
 \end_document
