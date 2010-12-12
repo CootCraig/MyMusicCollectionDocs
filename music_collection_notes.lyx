@@ -93,6 +93,10 @@ git push origin master
 Heroku Deployment
 \end_layout
 
+\begin_layout Subsubsection
+Create the Heroku application
+\end_layout
+
 \begin_layout Paragraph
 ~/dev/music_collection/MyMusicCollection
 \end_layout
@@ -116,6 +120,95 @@ Created http://mymusiccollection.heroku.com/ | git@heroku.com:mymusiccollection.
 
 \begin_layout LyX-Code
 Git remote heroku added
+\end_layout
+
+\begin_layout Paragraph
+git push heroku master
+\end_layout
+
+\begin_layout LyX-Code
+-----> Heroku receiving push
+\end_layout
+
+\begin_layout LyX-Code
+-----> Rails app detected
+\end_layout
+
+\begin_layout LyX-Code
+-----> WARNING: Detected Rails is not declared in either .gems or Gemfile
+\end_layout
+
+\begin_layout LyX-Code
+Scheduling the install of Rails 2.3.10.
+\end_layout
+
+\begin_layout LyX-Code
+See http://docs.heroku.com/gems for details on specifying gems.
+\end_layout
+
+\begin_layout LyX-Code
+-----> Installing gem rails 2.3.10 from http://rubygems.org
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed activesupport-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed activerecord-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed rack-1.1.0
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed actionpack-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed actionmailer-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed activeresource-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+Successfully installed rails-2.3.10
+\end_layout
+
+\begin_layout LyX-Code
+7 gems installed
+\end_layout
+
+\begin_layout LyX-Code
+Compiled slug size is 7.8MB
+\end_layout
+
+\begin_layout LyX-Code
+-----> Launching...
+ done
+\end_layout
+
+\begin_layout LyX-Code
+http://mymusiccollection.heroku.com deployed to Heroku
+\end_layout
+
+\begin_layout LyX-Code
+To git@heroku.com:mymusiccollection.git
+\end_layout
+
+\begin_layout LyX-Code
+* [new branch] master -> master
+\end_layout
+
+\begin_layout Subsubsection
+Managing gems on heroku
+\end_layout
+
+\begin_layout Subsubsection
+Manage Postgresql database local and on Heroku
 \end_layout
 
 \end_body
