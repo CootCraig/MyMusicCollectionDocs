@@ -36,6 +36,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -209,6 +210,142 @@ Managing gems on heroku
 
 \begin_layout Subsubsection
 Manage Postgresql database local and on Heroku
+\end_layout
+
+\begin_layout Section
+Pick Authentication methodology
+\end_layout
+
+\begin_layout Subsection
+plataformatec/devise
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/plataformatec/devise
+\end_layout
+
+\begin_layout Standard
+Devise is a flexible authentication solution for Rails based on Warden.
+ It:
+\end_layout
+
+\begin_layout Itemize
+Is Rack based;
+\end_layout
+
+\begin_layout Itemize
+Is a complete MVC solution based on Rails engines;
+\end_layout
+
+\begin_layout Itemize
+Allows you to have multiple roles (or models/scopes) signed in at the same
+ time;
+\end_layout
+
+\begin_layout Itemize
+Is based on a modularity concept: use just what you really need.
+\end_layout
+
+\begin_layout Subsection
+OmniAuth: Standardized Multi-Provider Authentication
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/intridea/omniauth
+\end_layout
+
+\begin_layout Standard
+OmniAuth is a new Rack-based authentication system for multi-provider external
+ authentcation.
+ OmniAuth is built from the ground up on the philosophy that authentication
+ is not the same as identity, and is based on two observations:
+\end_layout
+
+\begin_layout Enumerate
+The traditional 'sign up using a login and password' model is becoming the
+ exception, not the rule.
+ Modern web applications offer external authentication via OpenID, Facebook,
+ and/or OAuth.
+\end_layout
+
+\begin_layout Enumerate
+The interconnectable web is no longer a dream, it is a necessity.
+ It is not unreasonable to expect that one application may need to be able
+ to connect to one, three, or twelve other services.
+ Modern authentication systems should allow a user's identity to be associated
+ with many authentications.
+\end_layout
+
+\begin_layout Subsubsection
+Railscasts - OmniAuth Part 1
+\end_layout
+
+\begin_layout LyX-Code
+http://railscasts.com/episodes/235-omniauth-part-1
+\end_layout
+
+\begin_layout LyX-Code
+http://asciicasts.com/episodes/235-omniauth-part-1
+\end_layout
+
+\begin_layout Standard
+OmniAuth Part 1 - OmniAuth is an easy way to add many different authentication
+ services to your app.
+ In this episode we start integrating it with Devise.
+\end_layout
+
+\begin_layout Subsection
+Janrain Engage (formerly RPX)
+\end_layout
+
+\begin_layout LyX-Code
+http://www.janrain.com/products/engage
+\end_layout
+
+\begin_layout Subsubsection
+Implementing RPX with clearance in Ruby on rails in 5 minutes
+\end_layout
+
+\begin_layout Subsection
+Clearance - Rails authentication with email & password.
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/thoughtbot/clearance
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/thoughtbot/clearance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+rpx_now
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/grosser/rpx_now
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/thoughtbot/clearance
+\end_layout
+
+\begin_layout Subsection
+authlogic-connect
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/viatropos/authlogic-connect
 \end_layout
 
 \end_body
