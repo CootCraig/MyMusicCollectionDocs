@@ -294,6 +294,83 @@ OmniAuth Part 1 - OmniAuth is an easy way to add many different authentication
  In this episode we start integrating it with Devise.
 \end_layout
 
+\begin_layout Subsubsection
+OmniAuth for external authentication with rails
+\end_layout
+
+\begin_layout LyX-Code
+http://www.qed42.com/blog/omniauth-external-authentication-rails
+\end_layout
+
+\begin_layout Standard
+Omniauth doesn't handle your session, it mainly focuses on bringing you
+ the required data from the provider and its upto you to manage the session.
+ You can use any authentication system in rails to do that e.g devise, restful_au
+thentication, authlogic etc.
+ OmniAuth is the best solution for seamless integration of multiple authenticati
+on providers.
+\end_layout
+
+\begin_layout Subsubsection
+Authlogic vs Devise for Authentication in Rails
+\end_layout
+
+\begin_layout LyX-Code
+http://ionrails.com/2010/11/10/authlogic-vs-devise-rails-authentication/
+\end_layout
+
+\begin_layout Standard
+These last three points were the deal-breaker for me.
+ I prefer Authlogic.
+ I’m going to delete my Devise branch.
+\end_layout
+
+\begin_layout Subsubsection
+Devise, Authlogic, & Restful Authorization - Posted by Ralph Shnelvar (ralphshne
+lvar)
+\end_layout
+
+\begin_layout LyX-Code
+http://www.ruby-forum.com/topic/201930#879210
+\end_layout
+
+\begin_layout Standard
+My application needed/needs the ability to authenticate a login via email.
+ 
+\end_layout
+
+\begin_layout Standard
+It takes some doing to get it all installed.
+ Nonetheless, I recommend Devise.
+ 
+\end_layout
+
+\begin_layout Standard
+Caution: I'm a newbie to RoR so take my recommendation with a brick of salt.
+\end_layout
+
+\begin_layout Subsubsection
+OmniAuth and devise
+\end_layout
+
+\begin_layout Paragraph
+Devise 1.2 supports integration with OmniAuth.
+ 
+\end_layout
+
+\begin_layout Standard
+This wiki page will cover the basics to have this integration working using
+ an OAuth provider as example.
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/plataformatec/devise/wiki/OmniAuth%3a-Overview
+\end_layout
+
+\begin_layout Subsubsection
+OmniAuth and authlogic
+\end_layout
+
 \begin_layout Subsection
 Janrain Engage (formerly RPX)
 \end_layout
@@ -348,8 +425,86 @@ authlogic-connect
 https://github.com/viatropos/authlogic-connect
 \end_layout
 
+\begin_layout Subsection
+Devise
+\end_layout
+
+\begin_layout Subsubsection
+209: Introducing Devise
+\end_layout
+
+\begin_layout LyX-Code
+http://asciicasts.com/episodes/209-introducing-devise
+\end_layout
+
+\begin_layout Standard
+We’ve covered several authentication solutions over the course of these
+ episodes and today we’re going to show you another.
+ This one is called “devise” and has been gaining in popularity recently.
+ Devise is based on Warden, a Rack-based authentication solution, and uses
+ it under the bonnet.
+ You won’t need to know anything about Warden to follow this episode though
+ as we’re going to be dealing with devise directly.
+\end_layout
+
+\begin_layout Standard
+Devise handles authentication across the entire stack.
+ It you’re familiar with Authlogic which was covered back in episode 160
+ [watch, read] you’ll know that it covers just the model layer.
+ By comparison, devise is a Rails Engine and covers controllers and views
+ as well.
+ Devise is modular and currently consists of eleven modules, each of which
+ provides a different aspect of authentication.
+ For example one module, Rememberable, remembers the user’s authentication
+ in a saved cookie while another, Recoverable, looks after resetting the
+ user’s password and sending reset instructions.
+ This approach makes it easy to choose which parts of the authentication
+ you want to use in your applications.
+\end_layout
+
+\begin_layout Paragraph
+Adding Authentication to an Application
+\end_layout
+
+\begin_layout Standard
+Let’s take a look at what’s required to get devise working in an application.
+ Below is a screenshot from a simple project management application, written
+ in Rails 3.0 and we’re going to use devise to add a User model and some
+ authentication to it.
+\end_layout
+
 \begin_layout Section
 How to access Discogs.com
+\end_layout
+
+\begin_layout Section
+Other example Rails apps
+\end_layout
+
+\begin_layout Subsection
+Ruby: Blooger 
+\end_layout
+
+\begin_layout LyX-Code
+http://jjinux.blogspot.com/2010/08/ruby-blooger.html
+\end_layout
+
+\begin_layout Standard
+I needed some sample code for an interview, so I built a website called
+ Blooger.
+ It's a site (like Blogger) where people can go create a blog to blog about
+ their booger stories.
+ It even has functioning Atom feeds :)
+\end_layout
+
+\begin_layout Standard
+Here's the source code.
+ I used Cucumber, RSpec, Webrat, and factory_girl to do behavior driven
+ development.
+ I used Authlogic for authentication.
+ I used BlueCloth for Markdown support in order to format the blog posts.
+ The README in the source has more details.
+ 
 \end_layout
 
 \end_body
