@@ -473,8 +473,126 @@ Let’s take a look at what’s required to get devise working in an application
  authentication to it.
 \end_layout
 
+\begin_layout Subsubsection
+Rails Authentication with Devise and CanCan – Customizing Devise Controllers
+\end_layout
+
+\begin_layout LyX-Code
+http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-c
+ustomizing-devise-controllers/
+\end_layout
+
+\begin_layout Standard
+I’m tired of spending loads of time creating user authentication systems
+ with permissions or swimming against the current to customize what’s available.
+ There’s great open source stuff out there but until now, I haven’t gotten
+ the full package with really easy customization.
+\end_layout
+
+\begin_layout Standard
+The Devise and CanCan combo for user authentication and permissions in Rails
+ is my combo of choice.
+\end_layout
+
+\begin_layout Standard
+With Devise and CanCan, you can create a customized authentication and registrat
+ion process in 15 minutes, and spend another 15 minutes implementing roles
+ and permissions.
+\end_layout
+
+\begin_layout Paragraph
+CanCan
+\end_layout
+
+\begin_layout Standard
+CanCan is a great gem for implementing model permissions.
+ The main reasons I chose CanCan are:
+\end_layout
+
+\begin_layout Itemize
+The code written to check permissions is very readable
+\end_layout
+
+\begin_layout Itemize
+The code written to declare permissions is very concise and readable
+\end_layout
+
+\begin_layout Itemize
+It keeps permission logic in a single location so it is not duplicated across
+ controllers, views, etc.
+\end_layout
+
+\begin_layout Itemize
+Aliasing actions (read = index and show) creates more concise and readable
+ code
+\end_layout
+
+\begin_layout Standard
+Ryan Bates has a great screen cast on using CanCan here, but I do not recommend
+ using his roles mask method (mentioned in the screen cast).
+ It certainly works but it’s bad database design and you will feel the pain
+ later.
+\end_layout
+
+\begin_layout Paragraph
+Authorization with CanCan - Railscast
+\end_layout
+
+\begin_layout LyX-Code
+http://railscasts.com/episodes/192-authorization-with-cancan
+\end_layout
+
+\begin_layout LyX-Code
+http://asciicasts.com/episodes/192-authorization-with-cancan
+\end_layout
+
+\begin_layout Standard
+CanCan is a simple authorization plugin that offers a lot of flexibility.
+ See how to use it in this episode.
+\end_layout
+
 \begin_layout Section
 How to access Discogs.com
+\end_layout
+
+\begin_layout LyX-Code
+https://www.discogs.com/users/api_key
+\end_layout
+
+\begin_layout LyX-Code
+API Key: c1c946026c
+\end_layout
+
+\begin_layout LyX-Code
+Name: MyMusicCollectionDiscogsKey
+\end_layout
+
+\begin_layout Subsection
+A Ruby wrapper for the Discogs.com API
+\end_layout
+
+\begin_layout LyX-Code
+http://andrewbuntine.com/articles/2009/7/5/a-ruby-wrapper-for-the-discogscom-api
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/buntine/discogs
+\end_layout
+
+\begin_layout Standard
+A 100% Ruby wrapper of the Discogs.com API.
+ No dependencies, no extra gems.
+ :) Discogs::Wrapper abstracts all the nasty boilerplate code needed to
+ interact with the Discogs API.
+ It gives you direct access to the information you need.
+\end_layout
+
+\begin_layout Subsubsection
+Help / Forums / API / Ruby wrapper for the API v1.0
+\end_layout
+
+\begin_layout LyX-Code
+http://www.discogs.com/help/forums/topic/191673
 \end_layout
 
 \begin_layout Section
@@ -505,6 +623,62 @@ Here's the source code.
  I used BlueCloth for Markdown support in order to format the blog posts.
  The README in the source has more details.
  
+\end_layout
+
+\begin_layout Section
+Selected Software
+\end_layout
+
+\begin_layout Subsection
+Authentication / Roles
+\end_layout
+
+\begin_layout Itemize
+Devise
+\end_layout
+
+\begin_layout Itemize
+CanCan
+\end_layout
+
+\begin_layout Itemize
+OmniAuth
+\end_layout
+
+\begin_layout Subsection
+Discogs.com Access
+\end_layout
+
+\begin_layout Section
+Research Devise / CanCan / OmniAuth
+\end_layout
+
+\begin_layout Section
+Research Andrew Buntine Discogs Library
+\end_layout
+
+\begin_layout Paragraph
+Github Repository
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/buntine/discogs
+\end_layout
+
+\begin_layout LyX-Code
+git://github.com/buntine/discogs.git
+\end_layout
+
+\begin_layout LyX-Code
+https://github.com/buntine/discogs/wiki
+\end_layout
+
+\begin_layout Paragraph
+Andrew Buntine's Blog entry
+\end_layout
+
+\begin_layout LyX-Code
+http://andrewbuntine.com/articles/2009/7/5/a-ruby-wrapper-for-the-discogscom-api
 \end_layout
 
 \end_body
