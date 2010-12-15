@@ -208,8 +208,114 @@ To git@heroku.com:mymusiccollection.git
 Managing gems on heroku
 \end_layout
 
+\begin_layout LyX-Code
+http://docs.heroku.com/gems
+\end_layout
+
+\begin_layout Standard
+Gem Bundler is the best way to manage your gems.
+ We suggest all apps on Heroku use Bundler.
+ See our bundler page for full details on Bundler support.
+\end_layout
+
+\begin_layout Paragraph
+Gem Bundler
+\end_layout
+
+\begin_layout LyX-Code
+http://docs.heroku.com/bundler
+\end_layout
+
+\begin_layout Standard
+Gem Bundler is the default gem manager for Rails 3, and can be used with
+ any Ruby project as it has no dependency on framework.
+ Bundler is THE suggested way to manage your gems on Heroku.
+\end_layout
+
+\begin_layout Standard
+To use, install bundler:
+\end_layout
+
+\begin_layout LyX-Code
+$ gem install bundler 
+\end_layout
+
+\begin_layout Standard
+Create a file named Gemfile in the root of your app specifying what gems
+ are required to run it:
+\end_layout
+
+\begin_layout LyX-Code
+source :gemcutter
+\end_layout
+
+\begin_layout LyX-Code
+gem 'sinatra', '1.0'
+\end_layout
+
+\begin_layout Standard
+The Gemfile should be added to the git repository since it is part of the
+ app.
+ You should also add the .bundle directory to your gitignore file.
+ Once you have added the Gemfile, it makes it easy for other developers
+ to get their environment ready to run the app:
+\end_layout
+
+\begin_layout LyX-Code
+$ bundle install 
+\end_layout
+
+\begin_layout LyX-Code
+$ git add Gemfile Gemfile.lock
+\end_layout
+
+\begin_layout Standard
+This will ensure all gems specified on Gemfile, together with their dependencies
+, are available for your application.
+ Running “bundle install” will also generate a “Gemfile.lock” file.
+ We encourage you to add the Gemfile.lock file to your git repo.
+ The Gemfile.lock ensures that your deployed versions of gems on Heroku match
+ the version installed locally on your development machine.
+\end_layout
+
+\begin_layout Standard
+Heroku also uses that file to resolve and install your application dependencies
+ automatically.
+ All you need to do is to push it:
+\end_layout
+
+\begin_layout Paragraph
+Bundler Web Site
+\end_layout
+
+\begin_layout LyX-Code
+http://gembundler.com/
+\end_layout
+
+\begin_layout Paragraph
+Using Bundler with Rails 2.3
+\end_layout
+
+\begin_layout LyX-Code
+http://gembundler.com/rails23.html
+\end_layout
+
+\begin_layout Subparagraph
+Look at the instructions 
+\end_layout
+
+\begin_layout Standard
+Rails 2.3 comes with its own gem handling.
+ We're going to override that and replace it with support for Bundler.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Manage Postgresql database local and on Heroku
+\end_layout
+
+\begin_layout Section
+RVM and Bundler
 \end_layout
 
 \begin_layout Section
